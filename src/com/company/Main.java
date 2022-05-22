@@ -1,9 +1,10 @@
 package com.company;
 
-import com.company.creatures.Human;
-import com.company.creatures.Pet;
+import com.company.creatures.*;
 import com.company.device.Car;
 import com.company.device.Phone;
+
+import java.util.*;
 
 public class Main {
 
@@ -70,12 +71,54 @@ public class Main {
 
         kacper.pet = brotherInLaw;
 
-        try {
-            brotherInLaw.sell(kacper, sister, 2.0);
-            System.out.println("Szwagier sprzedany");
-        } catch (Exception e) {
-            System.out.println("Szwagie nie sprzedany");
-            e.printStackTrace();
+        Phone nokia = new Phone("6410", "Nokia", 2000);
+        nokia.installAnApp("YouTube");
+
+        sister.takeForAWalk();
+
+        System.out.println(nokia);
+
+        Animal[] animals = new Animal[4];
+        animals[0] = dog;
+        animals[1] = cat;
+        animals[2] = kacper;
+        animals[3] = new FarmAnimal("cow");
+
+        System.out.println("Zwierzęta niejadalne:");
+        for (Animal animal : animals) {
+            if (!(animal instanceof Edible)) {
+                System.out.println(animal);
+            }
         }
+
+        List<String> stringList = new LinkedList<>();
+        Set<String> stringSet = new TreeSet<>();
+
+        String pn = "poniedzialek";
+        String wt = "wtorek";
+        String sr = "sroda";
+        String czw = "czwartek";
+
+        stringList.add(pn);
+        stringList.add(pn);
+        stringList.add(pn);
+        stringList.add(wt);
+        stringList.add(sr);
+        stringList.add(pn);
+
+        Collections.sort(stringList);
+
+        System.out.println(stringList);
+
+        stringSet.add(pn);
+        stringSet.add(czw);
+        stringSet.add(pn);
+        stringSet.add(wt);
+        stringSet.add(sr);
+        stringSet.add(pn);
+
+        System.out.println(stringSet);
+
+
     }
 }

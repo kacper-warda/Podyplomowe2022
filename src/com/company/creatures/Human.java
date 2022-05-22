@@ -51,6 +51,11 @@ public class Human extends Animal {
         }
     }
 
+    @Override
+    public void takeForAWalk() {
+        System.out.println("Inne wyprowadzanie na spacer");
+    }
+
     public String toString() {
         return this.firstName + " " + this.lastName + " lat " + age;
     }
