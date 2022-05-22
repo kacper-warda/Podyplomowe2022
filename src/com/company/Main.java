@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.creatures.*;
 import com.company.device.Car;
+import com.company.device.Diesel;
 import com.company.device.Phone;
 
 import java.util.*;
@@ -28,7 +29,7 @@ public class Main {
         kacper.setSalary(1000.0);
         System.out.println(kacper.getSalary());
 
-        Car fiat = new Car("bravo", "fiat", 2021);
+        Car fiat = new Diesel("bravo", "fiat", 2021);
         fiat.value = 500.0;
 
         kacper.setCar(fiat);
@@ -46,9 +47,9 @@ public class Main {
         System.out.println(kacper);
 
 
-        Car pasat1 = new Car("pasat", "vw", 2001);
+        Car pasat1 = new Diesel("pasat", "vw", 2001);
         pasat1.value = 1200.0;
-        Car pasat2 = new Car("pasat", "vw", 2001);
+        Car pasat2 = new Diesel("pasat", "vw", 2001);
         pasat2.value = 1300.0;
 
         Human brotherInLaw = new Human();
